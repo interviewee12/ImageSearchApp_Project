@@ -1,0 +1,177 @@
+/* General Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 40px;
+}
+
+/* Header Styles */
+
+header {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+header h1 {
+  color: grey;
+}
+
+/* Search Container Styles */
+
+header form .search-container {
+  margin-top: 20px;
+  position: relative;
+}
+
+header form .search-container input {
+  width: 100%;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 20px;
+  border: none;
+  background-color: #eee;
+}
+
+header form .search-container .material-symbols-outlined {
+  position: absolute;
+  right: 10px;
+  bottom: 12px;
+  color: #777;
+  cursor: pointer;
+}
+
+/* Images Container Styles */
+
+.images-container {
+  margin-block: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Image Styles */
+
+.images-container img {
+  width: 300px;
+  height: 280px;
+}
+
+.images-container .imageDiv {
+  position: relative;
+}
+
+.imageDiv .overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: height 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageDiv:hover .overlay {
+  height: 100%;
+}
+
+.imageDiv .overlay h3 {
+  color: white;
+  display: none;
+  text-align: center;
+  font-size: 20px;
+}
+
+.imageDiv:hover .overlay h3 {
+  display: block;
+}
+
+/* Load More Button Styles */
+
+.loadMoreBtn {
+  border: none;
+  background-color: lightseagreen;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Main Section Styles */
+
+main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 50px 0;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content (the image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Media Query */
+
+@media screen and (max-width: 920px) {
+  header {
+      width: 80px;
+  }
+}
